@@ -32,12 +32,12 @@ struct RotatingBoard : View {
         
         var index: Int = 0
         
-        //돌아간 각도에서 조각의 각도만큼 반복적으로 빼주어 화살표가 가르키는 인덱스가 몇번째인지 구한다.
+        //돌아간 각도에서 조각의 각도만큼 반복적으로 빼주어 화살표가 가르키는 인덱스가 몇 번째인지 구한다.
         while offsetRotation > 0 {
             index += 1
             offsetRotation -= Int(360/userNumber)
         }
-        
+        //구한 값에서 1을 빼준다(배열에 접근하기 위해)
         return (index - 1)
     }
     
