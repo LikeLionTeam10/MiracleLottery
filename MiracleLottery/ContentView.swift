@@ -49,7 +49,7 @@ struct ContentView: View {
                 resultTextOpacity = 0.0
                 
                 //돌림판 회전값 랜덤 추가
-                rotation += Int.random(in:1...3600)
+                rotation += Int.random(in:360...3600)
                 
                 //지금으로부터 9초 후에 투명도를 1.0으로 만들어주는 역할
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 9) {

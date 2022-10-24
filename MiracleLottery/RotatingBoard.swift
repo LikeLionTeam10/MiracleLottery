@@ -15,7 +15,7 @@ struct RotatingBoard : View {
     
     
     
-    var lunchMenus: [String] = ["부대찌개", "돈까스", "불백", "김치찜", "마카롱", "육개장", "짜장면", "초밥", "스파게티", "삼겹살"]
+    var lunchMenus: [String] = ["승준", "원형", "형구", "진형", "성민", "예원", "석준", "초밥", "스파게티", "삼겹살"]
     
     var color: [Color] = [
         .red, .yellow, .gray, .blue, .pink, .purple, .brown, .indigo, .green, .orange, .teal
@@ -99,6 +99,4 @@ struct RotatingBoard : View {
     }
     
 }
-
-
 
