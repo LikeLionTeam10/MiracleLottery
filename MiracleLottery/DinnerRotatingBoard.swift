@@ -1,21 +1,18 @@
 //
-//  RotatingBoard.swift
+//  DinnerRotatingBoard.swift
 //  MiracleLottery
 //
-//  Created by Martin on 2022/10/22.
+//  Created by 김예원 on 2022/10/24.
 //
 
 import SwiftUI
 
-/*struct RotatingBoard : View {
-    
-    @Binding var userNumber: Int
-    @Binding var rotation: Int
-    @Binding var opacity: CGFloat
+struct DinnerRotatingBoard: View {
+   
+    @ObservedObject var menuData: MenuData
     
     
-    
-    var lunchMenus: [String] = ["승준", "원형", "형구", "진형", "성민", "예원", "석준", "초밥", "스파게티", "삼겹살"]
+    var lunchMenus: [String] = ["부대찌개", "돈까스", "불백", "김치찜", "마카롱", "육개장", "짜장면", "초밥", "스파게티", "삼겹살"]
     
     var color: [Color] = [
         .red, .yellow, .gray, .blue, .pink, .purple, .brown, .indigo, .green, .orange, .teal
@@ -53,9 +50,9 @@ import SwiftUI
             ZStack {
                 Circle()
                     .frame(width: 320, height: 320)
-                ForEach(1 ..< userNumber + 1) { index in
-                    let eachArcStartAngle: Double = Double(360 / userNumber * (index - 1))
-                    let eachArcEndAngle: Double = Double(360 / userNumber * (index))
+                ForEach(1 ..< menuData.userNumber + 1) { index in
+                    let eachArcStartAngle: Double = Double(360 / menuData.userNumber * (index - 1))
+                    let eachArcEndAngle: Double = Double(360 / menuData.userNumber * (index))
                     let middleAngle: Double = (eachArcStartAngle + eachArcEndAngle) / 2
                     
                     
@@ -75,8 +72,8 @@ import SwiftUI
                         
                     }
                 }
-                .rotationEffect(.degrees(Double(self.rotation)))
-                .animation(.timingCurve(0, 0.8, 0.2, 1, duration:10), value: rotation)
+                .rotationEffect(.degrees(Double(self.menuData.rotation)))
+                .animation(.timingCurve(0, 0.8, 0.2, 1, duration:10), value: menuData.rotation)
                 
                 
                 Image(systemName: "arrowtriangle.down.fill")
@@ -90,13 +87,13 @@ import SwiftUI
                     .frame(width:100, height:40)
                     .foregroundColor(.white)
                     .overlay() {
-                        let index: Int = getCurrentIndex(rotation: rotation, userNumber: userNumber)
+                        let index: Int = getCurrentIndex(rotation: menuData.rotation, userNumber: menuData.userNumber)
                         Text(lunchMenus[index])
-                            .opacity(opacity)
+                            .opacity(menuData.resultTextOpacity)
                     }
             }
         }
     }
     
-} */
 
+}
