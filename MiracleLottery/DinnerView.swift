@@ -23,7 +23,7 @@ var body: some View {
         Text("돌려 돌려\n저메추 돌림판 ~ ! ")
             .font(.largeTitle)
             .fontWeight(.black)
-            .foregroundColor(.pink)
+            .foregroundColor(.purple)
             .offset(x:0,y:50)
             .multilineTextAlignment(.leading)
             .opacity(menuData.titleTextOpacity)
@@ -35,7 +35,7 @@ var body: some View {
             })
             
     
-        LunchRotatingBoard(menuData: menuData)
+        DinnerRotatingBoard(menuData: menuData)
            
 //
 //            Stepper(value: $userNumber, in: 2...10, step: 1) {
@@ -54,6 +54,10 @@ var body: some View {
             //돌림판 회전값 랜덤 추가
             menuData.rotation += Int.random(in:1...3600)
             
+            let index: Int = menuData.getCurrentIndex()
+            let menuInfo: String = "오늘의 저녁메뉴는 \(menuData.dinnerMenus[index])"
+            menuData.menuResultListUpdate(menuInfo: menuInfo)
+            
             //지금으로부터 9초 후에 투명도를 1.0으로 만들어주는 역할
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 9) {
                 menuData.resultTextOpacity = 1.0
@@ -63,8 +67,8 @@ var body: some View {
                 .frame(width:150.0, height:30.0)
         }
         .buttonStyle(.borderedProminent)
-        .offset(x:0, y:-150)
-        .accentColor(.pink)
+        .offset(x:0, y:-100)
+        .accentColor(.purple)
         Spacer()
     }
 }
