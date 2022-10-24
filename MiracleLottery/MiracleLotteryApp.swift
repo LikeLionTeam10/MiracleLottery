@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+//시작화면
 @main
 struct MiracleLotteryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            IntroView()
         }
     }
 }
