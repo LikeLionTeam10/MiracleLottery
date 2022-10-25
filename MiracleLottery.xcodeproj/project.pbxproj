@@ -18,6 +18,7 @@
 		C96105FA290672FB0077B9FC /* LunchRotatingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96105F9290672FB0077B9FC /* LunchRotatingBoard.swift */; };
 		C96105FC290673200077B9FC /* DinnerRotatingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96105FB290673200077B9FC /* DinnerRotatingBoard.swift */; };
 		C96105FE290675EE0077B9FC /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96105FD290675EE0077B9FC /* MenuData.swift */; };
+		C96106012907682C0077B9FC /* ResultHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96106002907682C0077B9FC /* ResultHistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C96105F9290672FB0077B9FC /* LunchRotatingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchRotatingBoard.swift; sourceTree = "<group>"; };
 		C96105FB290673200077B9FC /* DinnerRotatingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerRotatingBoard.swift; sourceTree = "<group>"; };
 		C96105FD290675EE0077B9FC /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		C96106002907682C0077B9FC /* ResultHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +67,10 @@
 		5BB072F129025BE300E8096F /* MiracleLottery */ = {
 			isa = PBXGroup;
 			children = (
+				C96105FF290688060077B9FC /* View */,
 				5BB072F229025BE300E8096F /* MiracleLotteryApp.swift */,
-				5BB072F429025BE300E8096F /* ContentView.swift */,
 				5B3C5CEA2903FEA500035844 /* RotatingBoard.swift */,
-				C96105F32906681D0077B9FC /* IntroView.swift */,
-				C96105F529066CB10077B9FC /* LunchView.swift */,
 				C96105F9290672FB0077B9FC /* LunchRotatingBoard.swift */,
-				C96105F729066CF60077B9FC /* DinnerView.swift */,
 				C96105FB290673200077B9FC /* DinnerRotatingBoard.swift */,
 				C96105FD290675EE0077B9FC /* MenuData.swift */,
 				5BB072F629025BED00E8096F /* Assets.xcassets */,
@@ -86,6 +85,18 @@
 				5BB072F929025BED00E8096F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C96105FF290688060077B9FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BB072F429025BE300E8096F /* ContentView.swift */,
+				C96105F32906681D0077B9FC /* IntroView.swift */,
+				C96105F529066CB10077B9FC /* LunchView.swift */,
+				C96105F729066CF60077B9FC /* DinnerView.swift */,
+				C96106002907682C0077B9FC /* ResultHistoryView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				5B3C5CEB2903FEA600035844 /* RotatingBoard.swift in Sources */,
 				C96105FA290672FB0077B9FC /* LunchRotatingBoard.swift in Sources */,
 				C96105FE290675EE0077B9FC /* MenuData.swift in Sources */,
+				C96106012907682C0077B9FC /* ResultHistoryView.swift in Sources */,
 				C96105F629066CB10077B9FC /* LunchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

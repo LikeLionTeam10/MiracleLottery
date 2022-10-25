@@ -52,7 +52,10 @@ struct LunchView: View {
                 
                 //돌림판 회전값 랜덤 추가
                 menuData.rotation += Int.random(in:1...3600)
+                let index = menuData.getCurrentIndex()
                 
+                let result: String = "오늘의 점심메뉴는 \(menuData.lunchMenus[index])"
+                menuData.menuResultListUpdate(menuName: result)
                 //지금으로부터 9초 후에 투명도를 1.0으로 만들어주는 역할
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 9) {
                     menuData.resultTextOpacity = 1.0
