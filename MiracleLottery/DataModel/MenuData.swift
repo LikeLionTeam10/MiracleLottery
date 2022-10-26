@@ -14,22 +14,32 @@ class MenuData : ObservableObject {
     //"아직 메뉴를 고르지 않았습니다."
     @Published var menuResultList : [String] = []
     @Published var lunchMenus: [String] = ["부대찌개", "돈까스", "불백", "김치찜", "마카롱", "육개장", "짜장면", "초밥", "스파게티", "삼겹살"]
+    @Published var dinnerMenus: [String] = ["해물탕", "라멘", "탕수육", "파스타", "피자", "김피탕", "돼지국밥", "선지국", "감자탕", "초콜렛"]
     
+    var isPlaying: Bool = true
     //메뉴 보드
     @Published var userNumber: Int = 10
     @Published var rotation: Int = 0
     @Published var titleTextOpacity: CGFloat = 0.0
     @Published var resultTextOpacity: CGFloat = 0.0
     
+    //돌림판을 돌리고 있는지 확인하는 함수
+    func togglePlaying(){
+  //      isPlaying = true
+    }
     func resetData(){
-        userNumber = 10
-        rotation = 0
-        titleTextOpacity = 0.0
-        resultTextOpacity = 0.0
+        if isPlaying{
+            userNumber = 10
+            rotation = 0
+            titleTextOpacity = 1.0
+            resultTextOpacity = 0.0
+        }
+       // isPlaying = false
     }
     
     func menuResultListUpdate(menuName:String){
         self.menuResultList.append(menuName)
+        print("\(menuResultList)")
     }
     
     func getCurrentIndex() -> Int {

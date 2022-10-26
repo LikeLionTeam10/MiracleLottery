@@ -35,7 +35,7 @@ var body: some View {
             })
             
     
-        LunchRotatingBoard(menuData: menuData)
+        DinnerRotatingBoard(menuData: menuData)
            
 //
 //            Stepper(value: $userNumber, in: 2...10, step: 1) {

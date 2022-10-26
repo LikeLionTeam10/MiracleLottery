@@ -12,8 +12,8 @@ import SwiftUI
 struct MiracleLotteryApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            IntroView()
+            ContentView()
+            //IntroView()
         }
     }
 }

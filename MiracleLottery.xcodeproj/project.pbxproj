@@ -19,6 +19,13 @@
 		C96105FC290673200077B9FC /* DinnerRotatingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96105FB290673200077B9FC /* DinnerRotatingBoard.swift */; };
 		C96105FE290675EE0077B9FC /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96105FD290675EE0077B9FC /* MenuData.swift */; };
 		C96106012907682C0077B9FC /* ResultHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96106002907682C0077B9FC /* ResultHistoryView.swift */; };
+		C96106062908EBC00077B9FC /* CalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96106052908EBC00077B9FC /* CalcView.swift */; };
+		C96106082908EC0D0077B9FC /* CalcHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96106072908EC0D0077B9FC /* CalcHistoryView.swift */; };
+		C961060A2908EC5A0077B9FC /* CalcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96106092908EC5A0077B9FC /* CalcData.swift */; };
+		C961060C2908ECC70077B9FC /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961060B2908ECC70077B9FC /* NumberView.swift */; };
+		C961060F2908ED970077B9FC /* OperatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961060E2908ED970077B9FC /* OperatorView.swift */; };
+		C96106132908F9C20077B9FC /* FuncButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96106122908F9C20077B9FC /* FuncButtonView.swift */; };
+		C96106152908FB5A0077B9FC /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96106142908FB5A0077B9FC /* StatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		C96105FB290673200077B9FC /* DinnerRotatingBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnerRotatingBoard.swift; sourceTree = "<group>"; };
 		C96105FD290675EE0077B9FC /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		C96106002907682C0077B9FC /* ResultHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHistoryView.swift; sourceTree = "<group>"; };
+		C96106052908EBC00077B9FC /* CalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcView.swift; sourceTree = "<group>"; };
+		C96106072908EC0D0077B9FC /* CalcHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcHistoryView.swift; sourceTree = "<group>"; };
+		C96106092908EC5A0077B9FC /* CalcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcData.swift; sourceTree = "<group>"; };
+		C961060B2908ECC70077B9FC /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		C961060E2908ED970077B9FC /* OperatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorView.swift; sourceTree = "<group>"; };
+		C96106122908F9C20077B9FC /* FuncButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncButtonView.swift; sourceTree = "<group>"; };
+		C96106142908FB5A0077B9FC /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +81,12 @@
 		5BB072F129025BE300E8096F /* MiracleLottery */ = {
 			isa = PBXGroup;
 			children = (
-				C96105FF290688060077B9FC /* View */,
 				5BB072F229025BE300E8096F /* MiracleLotteryApp.swift */,
+				C96105FF290688060077B9FC /* View */,
+				C96106112908EE1B0077B9FC /* DataModel */,
 				5B3C5CEA2903FEA500035844 /* RotatingBoard.swift */,
 				C96105F9290672FB0077B9FC /* LunchRotatingBoard.swift */,
 				C96105FB290673200077B9FC /* DinnerRotatingBoard.swift */,
-				C96105FD290675EE0077B9FC /* MenuData.swift */,
 				5BB072F629025BED00E8096F /* Assets.xcassets */,
 				5BB072F829025BED00E8096F /* Preview Content */,
 			);
@@ -90,13 +104,44 @@
 		C96105FF290688060077B9FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C96106102908EDA20077B9FC /* Roulette */,
+				C961060D2908ED4D0077B9FC /* Calculator */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C961060D2908ED4D0077B9FC /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				C96106052908EBC00077B9FC /* CalcView.swift */,
+				C961060B2908ECC70077B9FC /* NumberView.swift */,
+				C96106072908EC0D0077B9FC /* CalcHistoryView.swift */,
+				C961060E2908ED970077B9FC /* OperatorView.swift */,
+				C96106122908F9C20077B9FC /* FuncButtonView.swift */,
+				C96106142908FB5A0077B9FC /* StatusView.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		C96106102908EDA20077B9FC /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
 				5BB072F429025BE300E8096F /* ContentView.swift */,
 				C96105F32906681D0077B9FC /* IntroView.swift */,
 				C96105F529066CB10077B9FC /* LunchView.swift */,
 				C96105F729066CF60077B9FC /* DinnerView.swift */,
 				C96106002907682C0077B9FC /* ResultHistoryView.swift */,
 			);
-			path = View;
+			path = Roulette;
+			sourceTree = "<group>";
+		};
+		C96106112908EE1B0077B9FC /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C96106092908EC5A0077B9FC /* CalcData.swift */,
+				C96105FD290675EE0077B9FC /* MenuData.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,14 +216,21 @@
 			files = (
 				C96105F829066CF60077B9FC /* DinnerView.swift in Sources */,
 				5BB072F529025BE300E8096F /* ContentView.swift in Sources */,
+				C96106132908F9C20077B9FC /* FuncButtonView.swift in Sources */,
+				C96106082908EC0D0077B9FC /* CalcHistoryView.swift in Sources */,
 				5BB072F329025BE300E8096F /* MiracleLotteryApp.swift in Sources */,
 				C96105F42906681D0077B9FC /* IntroView.swift in Sources */,
 				C96105FC290673200077B9FC /* DinnerRotatingBoard.swift in Sources */,
 				5B3C5CEB2903FEA600035844 /* RotatingBoard.swift in Sources */,
 				C96105FA290672FB0077B9FC /* LunchRotatingBoard.swift in Sources */,
+				C961060A2908EC5A0077B9FC /* CalcData.swift in Sources */,
+				C96106062908EBC00077B9FC /* CalcView.swift in Sources */,
 				C96105FE290675EE0077B9FC /* MenuData.swift in Sources */,
+				C96106152908FB5A0077B9FC /* StatusView.swift in Sources */,
+				C961060F2908ED970077B9FC /* OperatorView.swift in Sources */,
 				C96106012907682C0077B9FC /* ResultHistoryView.swift in Sources */,
 				C96105F629066CB10077B9FC /* LunchView.swift in Sources */,
+				C961060C2908ECC70077B9FC /* NumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

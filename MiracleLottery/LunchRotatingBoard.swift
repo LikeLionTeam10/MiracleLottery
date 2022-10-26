@@ -48,7 +48,7 @@ struct LunchRotatingBoard: View {
                     }
                 }
                 .rotationEffect(.degrees(Double(self.menuData.rotation)))
-                .animation(.timingCurve(0, 0.8, 0.2, 1, duration:10), value: menuData.rotation)
+                .animation(.timingCurve(0, 0.8, 0.2, 1, duration:menuData.rotation == 0 ? 0 : 10), value: menuData.rotation)
                 
                 
                 Image(systemName: "arrowtriangle.down.fill")

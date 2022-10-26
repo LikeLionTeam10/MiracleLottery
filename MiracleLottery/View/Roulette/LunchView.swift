@@ -47,6 +47,8 @@ struct LunchView: View {
 //
             
             Button(action:{
+                // 메뉴데이터 리셋
+                menuData.togglePlaying()
                 //버튼을 누를때 마다 결과텍스트 투명도를 0.0으로 초기화해준다.
                 menuData.resultTextOpacity = 0.0
                 
