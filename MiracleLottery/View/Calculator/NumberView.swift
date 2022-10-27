@@ -10,50 +10,161 @@
 import SwiftUI
 
 struct NumberView: View {
-    
+    @ObservedObject var calcData: CalcData
     var body: some View {
         VStack{
             HStack{
                 Button("7") {
-                    print("7")
+                    
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "7"
+                    print("7\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
                 
                 Button("8") {
-                    print("8")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "8"
+                    print("8\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
                 
                 Button("9") {
-                    print("9")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "9"
+                    print("9\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
             }
             HStack{
                 Button("4") {
-                    print("4")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "4"
+                    print("4\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
                 
                 Button("5") {
-                    print("5")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "5"
+                    print("5\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
                 
                 Button("6") {
-                    print("6")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "6"
+                    print("6\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
             }
             HStack(spacing: 10){
                 Button("1") {
-                    print("1")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "1"
+                    print("1\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
                 Button("2") {
-                    print("2")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "2"
+                    print("2\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
 
                 Button("3") {
-                    print("3")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "3"
+                    print("3\n\(calcData.currentStep)")
+                    
                 }.modifier(NumberButtonModifier())
             }
             HStack(spacing: 10){
                 Button("0") {
-                    print("0")
+                    if calcData.currentStep == .initialStep{
+                        calcData.inputText.removeLast()
+                        calcData.currentStep = .isSetStep
+                    }
+                    if calcData.isCalculated == true {
+                        calcData.firstNumber = 0.0
+                        calcData.secondNumber = 0.0
+                        calcData.isCalculated = false
+                    }
+                    calcData.inputText += "0"
+                    print("0\n\(calcData.currentStep)")
+                    
                 }.padding(30)
                 .frame(width: 170,height: 80,alignment: .leading)
                 .background(Color(UIColor.darkGray))
@@ -82,6 +193,6 @@ struct NumberButtonModifier : ViewModifier {
 }
 struct NumberView_Previews: PreviewProvider {
     static var previews: some View {
-        NumberView()
+        NumberView(calcData: CalcData())
     }
 }

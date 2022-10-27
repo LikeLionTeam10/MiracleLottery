@@ -8,29 +8,29 @@
 import SwiftUI
 
 struct CalcView: View {
+    //
+    @ObservedObject var calcData: CalcData
     var body: some View {
-       
         ZStack {
             //배경색 만들기:ZStack 사용
             Color.black.edgesIgnoringSafeArea(.all)
-
             VStack {
                 Spacer()
-                StatusView()
+                StatusView(calcData: calcData)
                 HStack {
                     VStack{
                         FuncButtonView()
-                        NumberView()
+                        NumberView(calcData: calcData)
                     }
-                    OperatorView()
+                    OperatorView(calcData: calcData)
                 }
             }
         }
-    }
 }
 
+    }
 struct CalcView_Previews: PreviewProvider {
     static var previews: some View {
-        CalcView()
+        CalcView(calcData: CalcData())
     }
 }

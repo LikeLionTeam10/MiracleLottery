@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var menuData :MenuData = MenuData()
+    @ObservedObject var menuData: MenuData = MenuData()
+    @ObservedObject var calcData: CalcData = CalcData()
     
     var body: some View {
         
@@ -38,7 +39,14 @@ struct ContentView: View {
                 Text("저매추")
             }
             NavigationView {
-                ResultHistoryView(menuData: menuData)
+                CalcView(calcData: calcData)
+            }
+            .tabItem {
+                Image(systemName: "figure.archery")
+                Text("계산기")
+            }
+            NavigationView {
+                ResultHistoryView(menuData: menuData,calcData: calcData)
             }.tabItem {
                 Image(systemName: "fork.knife")
                 Text("결과")
